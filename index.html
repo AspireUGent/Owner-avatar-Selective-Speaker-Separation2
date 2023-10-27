@@ -1,0 +1,167 @@
+<html lang="en">
+
+<head>
+<title>Audio Samples</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<style>
+  .logo{
+    margin-left: 5px;
+    float: left;
+  }
+  
+  .banner{
+    color: #3265C2;
+    margin-left: 2%;
+    /*margin-bottom: 0;*/
+    float: left;
+  }
+
+  .closer { 
+    line-height: 10px;
+  }
+
+  .row:after {
+    content: "";
+    display: flex;
+    clear: both;
+  }
+
+  .case{
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  body {
+    margin: 20;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  #topBtn:hover {
+    background-color: #3265C2;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  th {
+    text-align: center;
+  	background-color: #3265C2;
+  	color: white;
+  	height: 30px;
+  }
+
+  td {
+    text-align: center;
+  }
+  
+  tr {
+    border-bottom: 2px solid black;
+  }
+  
+  .original {
+    transform: scale(1);
+    position: inherit;
+    z-index: 0;
+  }
+  
+  .enlarged {
+    transform: scale(2);
+    position: relative;
+    z-index: 100;
+  }
+
+  .reference{
+    font-family: 'Times New Roman';
+    font-size: 12;
+  }
+
+
+</style>
+</head>
+
+<body>
+
+<div>
+   <div class="row">
+    <div class="logo"><img src=".\img\logo_ugent_nl.svg"></div>
+    <div class="banner">
+      <h1 class="closer">ASPIRE</h1>
+      <p class="closer" style="font-size: 80%;">Audio and Signal Processing, Interpretation, and Enhancement@IDLAB</p>
+    </div>
+  </div>
+
+</div>
+
+<div>
+
+<br/>
+<em>A DOA Dependent Feature Extraction for Selective Speaker Separation With a U-Net Architecture</em>
+
+<h2>Audio Samples </h2>
+<h4>VII. Application to Moving Speaker Recordings</h4>
+
+<table class="tb" border="1"id="ref" style="width:90%">
+<thead>
+<tr>
+  <th align="center">noisy microphone signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">
+     <audio controls=true  style="width: 100%" src="./audio/mic_chref.wav"></audio>
+  </td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+<table class="tb" border="1"id="speaker1" style="width:90%">
+<thead>
+<tr>
+  <th align="center" style="width: 30%"></th>
+  <th align="center" style="width: 35%">oracle separation (no dereverberation or denoising)</th>
+  <th align="center" style="width: 35%">output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td align="center">speaker j=1</td>
+  <td align="center"><audio controls=true style="width: 100%" src="./audio/oracle_speaker1.wav"></audio></td>
+  <td align="center"><audio controls=true style="width: 100%"  src="./audio/out_speaker1.wav"></audio></td>
+</tr>
+<tr>
+  <td align="center">speaker j=2</td>
+  <td align="center"><audio controls=true style="width: 100%"  src="./audio/oracle_speaker2.wav"></audio></td>
+  <td align="center"><audio controls=true style="width: 100%"  src="./audio/out_speaker2.wav"></audio></td>
+</tr>
+<tr>
+  <td align="center">fixed target range (180°±35°)</td>
+  <td align="center"><audio controls=true style="width: 100%"  src="./audio/oracle_180deg.wav"></audio></td>
+  <td align="center"><audio controls=true style="width: 100%"  src="./audio/out_180deg.wav"></audio></td>
+</tr>
+</tbody>
+</table>
+<br/>
+
+</body>
+
+</html>
